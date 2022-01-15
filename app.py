@@ -1,3 +1,5 @@
+#!/usr/bin/python3.9
+
 import GuessGame
 import MemoryGame
 import CurrencyRouletteGame
