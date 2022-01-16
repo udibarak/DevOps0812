@@ -5,7 +5,7 @@ import MemoryGame
 import CurrencyRouletteGame
 global difficulty, decision
 from flask import Flask, render_template, request
-app = Flask(__name__)
+app = Flask(__name__,template_folder='\app\Templates', static_folder='\app\Static')
 
 
 @app.route("/index.html")
