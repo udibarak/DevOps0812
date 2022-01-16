@@ -51,5 +51,5 @@ def difficulty_chooser():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8001, debug=True, template_folder='/app/Templates', static_folder='/app/Static')
+    app.run(host='0.0.0.0', port=8001, debug=True)
 
