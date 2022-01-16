@@ -12,13 +12,6 @@ def hello():
     return render_template('hello.html')
 
 
-@app.route("/uploader", methods=['GET', 'POST'])
-def uploader_file():
-    if request.method == 'POST':
-        f = request.files['file']
-        f.save(f.filename)
-        return f'file {f.filename} uploaded successfully'
-
 @app.route("/choose", methods=['POST'])
 def game_chooser():
     if request.method == 'POST':
