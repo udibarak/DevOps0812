@@ -36,9 +36,7 @@ def difficulty_chooser():
         if 'Currency_Roulette' in request.form:
             game_name = 'Currency Roulette'
             return render_template('choosedifficulty.html', game_name=game_name)
-@app.route("/guess", method=['POST']
-    if request.method == 'POST':
-        if
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=True)
 
