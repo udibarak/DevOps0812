@@ -44,8 +44,20 @@ def difficulty_chooser():
 @app.route("/currencyroulette", methods=['POST'])
 def game_launcher():
     if request.method == 'POST':
-        if "1" or "2" or "3" or "4" or "5" in request.form:
-            difficulty = request.values
+        if "1" in request.form:
+            difficulty = 1
+            CurrencyRouletteGame.play(difficulty)
+        if "2" in request.form:
+            difficulty = 2
+            CurrencyRouletteGame.play(difficulty)
+        if "3" in request.form:
+            difficulty = 3
+            CurrencyRouletteGame.play(difficulty)
+        if "4" in request.form:
+            difficulty = 4
+            CurrencyRouletteGame.play(difficulty)
+        if "5" in request.form:
+            difficulty = 5
             CurrencyRouletteGame.play(difficulty)
 
 if __name__ == '__main__':
