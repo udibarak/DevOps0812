@@ -29,13 +29,16 @@ def difficulty_chooser():
     if request.method == 'POST':
         if 'Memory_Game' in request.form:
             game_name = 'Memory Game'
-            return render_template('choosedifficulty.html', game_name=game_name)
+            game_path = 'memorygame'
+            return render_template('choosedifficulty.html', game_name=game_name, game_path=game_path)
         if 'Guess_Game' in request.form:
             game_name = 'Guess Game'
-            return render_template('choosedifficulty.html', game_name=game_name)
+            game_path = 'guessgame'
+            return render_template('choosedifficulty.html', game_name=game_name, game_path=game_path)
         if 'Currency_Roulette' in request.form:
             game_name = 'Currency Roulette'
-            return render_template('choosedifficulty.html', game_name=game_name)
+            game_path = 'currencyroulette'
+            return render_template('choosedifficulty.html', game_name=game_name, game_path=game_path)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=True)
