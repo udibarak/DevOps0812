@@ -12,12 +12,12 @@
     <div class="content">
 <h1>Welcome to {{ game_name }}</h1>
 <h1>Please choose Game Difficulty and Click Start Game:</h1>
-<form action="/choosedifficulty" method = "POST">
-    <button class="button button2" name="Memory_Game" value="1">Noob</button>
-    <button class="button button2" name="Guess Game" value="2">Easy</button>
-    <button class="button button2" name="Currency Roulette" value="3">Rookie</button>
-    <button class="button button2" name="Currency Roulette" value="4">Advanced</button>
-    <button class="button button2" name="Currency Roulette" value="5">Professional</button>
+<form action='/{{ game_name}}' method = "POST">
+    <button class="button button2" name='{{ game_name }}' value="1">Noob</button>
+    <button class="button button2" name='{{ game_name }}' value="2">Easy</button>
+    <button class="button button2" name='{{ game_name }}' value="3">Rookie</button>
+    <button class="button button2" name='{{ game_name }}' value="4">Advanced</button>
+    <button class="button button2" name='{{ game_name }}' value="5">Professional</button>
 </form>
     </div>
 </body>
