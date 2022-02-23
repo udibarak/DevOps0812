@@ -47,6 +47,7 @@ def game_launcher():
         if "1" in request.form:
             difficulty = 1
             CurrencyRouletteGame.play(difficulty)
+            return render_template('currencyroulette.html')
         if "2" in request.form:
             difficulty = 2
             CurrencyRouletteGame.play(difficulty)
