@@ -40,6 +40,14 @@ def difficulty_chooser():
             game_path = 'currencyroulette'
             return render_template('choosedifficulty.html', game_name=game_name, game_path=game_path)
 
+
+@app.route("/currencyroulette", methods=['POST'])
+def game_launcher():
+    if request.method == 'POST':
+        if "1" or "2" or "3" or "4" or "5" in request.form:
+            difficulty = request.values
+            CurrencyRouletteGame.play(difficulty)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=True)
 
